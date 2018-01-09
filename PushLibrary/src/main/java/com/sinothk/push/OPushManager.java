@@ -147,7 +147,7 @@ public class OPushManager {
      */
     public static void unsetAlias(Context aContext, String alias) {
         if (BY_WHICH == BY_XM) {
-            MiPushClient.setAlias(aContext, alias, null);
+            MiPushClient.unsetAlias(aContext, alias, null);
         }
     }
 
@@ -163,6 +163,30 @@ public class OPushManager {
      *                           category扩展参数，暂时没有用途，直接填null
      */
     public static void unsetUserAccount(Context applicationContext, String userAccount) {
+    }
+
+    /**
+     * 加入某个主题
+     *
+     * @param aContext
+     * @param topic    某个用户设置订阅的主题
+     */
+    public static void subscribe(Context aContext, String topic) {
+        if (BY_WHICH == BY_XM) {
+            MiPushClient.subscribe(aContext, topic, null);
+        }
+    }
+
+    /**
+     * 退出某个主题
+     *
+     * @param aContext
+     * @param topic    某个用户取消订阅的主题
+     */
+    public static void unsubscribe(Context aContext, String topic) {
+        if (BY_WHICH == BY_XM) {
+            MiPushClient.unsubscribe(aContext, topic, null);
+        }
     }
 
     /*
