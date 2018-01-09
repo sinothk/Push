@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         OPushManager.setAlias(getApplicationContext(), "381518188@qq.com");
 //        OPushManager.unsetAlias(getApplicationContext(), "381518188@qq.com");
         // 设置推送
-//        OPushManager.setUserAccount(getApplicationContext(), "381518188");
+        OPushManager.setUserAccount(getApplicationContext(), "381518188");
 //        OPushManager.unsetUserAccount(getApplicationContext(), "381518188");
 
         OPushManager.subscribe(getApplicationContext(), "宠物ID");
