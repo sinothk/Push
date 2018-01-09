@@ -32,7 +32,7 @@
 
         <receiver
             android:exported="true"
-            android:name="com.sinothk.push.demo.DemoMessageReceiver">
+            android:name="com.sinothk.push.OPushMessageReceiver">
             <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -44,6 +44,21 @@
                 <action android:name="com.xiaomi.mipush.ERROR" />
             </intent-filter>
         </receiver>
+
+        <!--<receiver
+            android:exported="true"
+            android:name="com.sinothk.push.demo.DemoMessageReceiver">
+            &lt;!&ndash;这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名&ndash;&gt;
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>-->
     </application>
 
 </manifest>
