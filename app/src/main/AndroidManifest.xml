@@ -10,16 +10,18 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <permission android:name="com.sinothk.push.demo.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
+    <permission
+        android:name="com.sinothk.push.demo.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
     <!--这里com.xiaomi.mipushdemo改成app的包名-->
     <uses-permission android:name="com.sinothk.push.demo.permission.MIPUSH_RECEIVE" />
     <!--这里com.xiaomi.mipushdemo改成app的包名-->
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MyApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -32,9 +34,10 @@
             </intent-filter>
         </activity>
 
+        <!--推送接收者-->
         <receiver
-            android:exported="true"
-            android:name="com.sinothk.push.OPushMessageReceiver">
+            android:name="com.sinothk.push.OPushMessageReceiver"
+            android:exported="true">
             <!--这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名-->
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -47,20 +50,6 @@
             </intent-filter>
         </receiver>
 
-        <!--<receiver
-            android:exported="true"
-            android:name="com.sinothk.push.demo.DemoMessageReceiver">
-            &lt;!&ndash;这里com.xiaomi.mipushdemo.DemoMessageRreceiver改成app中定义的完整类名&ndash;&gt;
-            <intent-filter>
-                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.xiaomi.mipush.ERROR" />
-            </intent-filter>
-        </receiver>-->
     </application>
 
 </manifest>
