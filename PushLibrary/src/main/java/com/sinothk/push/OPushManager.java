@@ -121,8 +121,6 @@ public class OPushManager {
             MiPushClient.unregisterPush(aContext);
             // 关闭MiPush推送服务，当用户希望不再使用MiPush推送服务的时候调用，调用成功之后，app将不会接收到任何MiPush服务推送的数据，直到下一次调用registerPush
         }
-
-
     }
 
     /**
